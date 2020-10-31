@@ -28,6 +28,5 @@ namespace DefaultNamespace
             Amount += amount;
             OnHeal?.Invoke(amount, Amount);
         }
-        
     }
 }

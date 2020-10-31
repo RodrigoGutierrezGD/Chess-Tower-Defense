@@ -28,29 +28,9 @@ namespace DefaultNamespace
 
      */
 
-    public interface ILife
-    {
-        void DoDamage(int amount);
-        void DoHeal(int amount);
-    }
 
-    public interface IAttack
-    {
-        void DoAttack(int amount);
-    }
     
-    [Serializable]
-    public class Attack : IAttack
-    {
-        public int Range;
-        public int Damage;
-        public int AttackSpeed;
-        
-        public void DoAttack(int amount)
-        {
-            
-        }
-    }
+
     
     public class Entity : MonoBehaviour
     {
@@ -62,75 +42,17 @@ namespace DefaultNamespace
             LifeController = new LifeController();
             LifeBarController = new LifeBarController();
 
-            LifeController.OnDamage += (damageTaken, totalLife) => 
-            {
-                LifeBarController.UpdateFill(totalLife);
-            };
+            LifeController.OnDamage += OnDamage;
         }
 
-        public void MyUpdate()
+        /*void OnDamage(int damageTaken, int totalLife)
         {
-            
-        }
+            LifeBarController.UpdateFill(totalLife);
+        }*/
 
-        private void OnTriggerEnter(Collider other)
+        void OnDamage(int damageTaken, int totalLife)
         {
-            
-        }
-    }
-
-    public enum State
-    {
-        PAUSE,
-        PLAYING,
-    }
-    
-    public class GameController : MonoBehaviour
-    {
-        public List<Entity> Entities;
-
-        public State GameState;
-        
-        // Object Pool
-        
-        // Interface - UI
-        // Controlador do Jogo
-
-        public void Update()
-        {
-            if (GameState == State.PLAYING)
-            {
-                foreach (var entity in Entities)
-                {
-                    entity.MyUpdate();
-                }
-            }
-        }
-    }
-
-    [Serializable]
-    public class Movement
-    {
-        // Cuida de toda movimentação
-    }
-
-    // public class Tower : MonoBehaviour
-    // {
-    //     // Life Controller
-    //     // Movement Controller
-    //     // Attack Controller
-    // }
-
-    public class TankTower : MonoBehaviour
-    {
-        // Life Controller
-        
-        private void OnTriggerEnter(Collider other)
-        {
-            // Tem buscar os inimigos
-            // Forcar os inimigos 
-            
-            
+            //LifeBarController.UpdateSprite(damageTaken);
         }
     }
 }
