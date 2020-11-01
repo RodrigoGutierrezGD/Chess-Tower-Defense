@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1188672653219994407}
   - component: {fileID: 1188672653219994400}
-  - component: {fileID: 6536826030931344785}
+  - component: {fileID: 2948474470545185039}
   m_Layer: 0
   m_Name: BishopTower
   m_TagString: Untagged
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6536826030931344785
+--- !u!114 &2948474470545185039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,6 +89,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1188672653219994401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3524b979cf28433782f398fef8d37ad4, type: 3}
+  m_Script: {fileID: 11500000, guid: 14dfe521dcea7d84e871cd3c1124bde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LifeController: {fileID: 0}
+  LifeBarController:
+    mySprite: {fileID: 0}
+    spriteState: []

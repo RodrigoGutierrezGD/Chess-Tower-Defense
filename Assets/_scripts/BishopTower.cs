@@ -8,7 +8,9 @@ namespace DefaultNamespace
     [Serializable]
     public class BishopTower : MonoBehaviour
     {
-        //LifeController LifeController;
+        public LifeController LifeController;
+        public LifeBarController LifeBarController;
+        public Attack Attack;
 
         Tower Tower;
 
@@ -19,13 +21,25 @@ namespace DefaultNamespace
             Tower.Range = 5;
             Tower.Attack = 1;
             Tower.AttackSpeed = 1;
+
+            LifeController = new LifeController();
+            LifeBarController = new LifeBarController();
+            Attack = new Attack();
+
+            LifeController.OnDamage += OnDamage;
+        }
+
+        void OnDamage(int damageTaken, int totalLife)
+        {
+            //LifeBarController.UpdateFill(totalLife);
+            LifeBarController.UpdateSprite(damageTaken, totalLife);
         }
 
         private void OnTriggerEnter(Collider hit)
         {
             if(hit.gameObject.name.Contains("Enemy"))
             {
-
+                //if(hit.gameObject)
             }
         }
     }
