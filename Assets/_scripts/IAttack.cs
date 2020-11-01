@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IAttack
 {
-    void DoAttack(int amount);
+    void DoAttack(int attack, int life);
 }

@@ -18,7 +18,7 @@ namespace DefaultNamespace
         {
             Tower = new Tower();
             Tower.Life = 5;
-            Tower.Range = 5;
+            Tower.Range = 10;
             Tower.Attack = 1;
             Tower.AttackSpeed = 1;
 

@@ -9,10 +9,10 @@ public class Attack : IAttack
     public int Damage;
     public int AttackSpeed;
 
-    public Action<int> OnAttack;
+    public Action<int, int> OnAttack;
 
-    public void DoAttack(int amount)
+    public void DoAttack(int attack, int life)
     {
-
+        OnAttack?.Invoke(attack, life);
     }
 }

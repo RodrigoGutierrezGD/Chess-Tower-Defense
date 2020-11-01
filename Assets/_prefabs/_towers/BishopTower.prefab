@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1188672653219994407}
   - component: {fileID: 1188672653219994400}
-  - component: {fileID: 2948474470545185039}
+  - component: {fileID: 114556035401196582}
+  - component: {fileID: 1558014949}
   m_Layer: 0
   m_Name: BishopTower
   m_TagString: Untagged
@@ -69,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300004, guid: fb0d1fef03e3e5148b7c81d9bfd0d49f, type: 3}
+  m_Sprite: {fileID: 21300010, guid: fb0d1fef03e3e5148b7c81d9bfd0d49f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2948474470545185039
+--- !u!114 &114556035401196582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,10 +90,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1188672653219994401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14dfe521dcea7d84e871cd3c1124bde2, type: 3}
+  m_Script: {fileID: 11500000, guid: 83ab15fb892aa124690f245ec2eb7d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   LifeController: {fileID: 0}
   LifeBarController:
     mySprite: {fileID: 0}
     spriteState: []
+--- !u!58 &1558014949
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188672653219994401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 10
